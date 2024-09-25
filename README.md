@@ -81,13 +81,18 @@ Client packet
 
 ## How to run
 
+### Build
+- ENV = Linux
+- Makefile should create two executables
+- server and client
+
 ### Client
 - ./client server_machine_name inputs.txt
 
 ### Server
 - ./server
 
-## Example line in file
+## Example line in input file
 
 ### IP2ORG
 - 0 128.233.0.0/16 2020 01 01
