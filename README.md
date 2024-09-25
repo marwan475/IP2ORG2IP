@@ -46,5 +46,14 @@ Autonomous Systems (AS) can be most simply described as a group of IP prefixes t
 - Server then sends response back to client with the requested information
 - Server waits for any more requests from connection and terminates if none
 
+## Example inputs
+
+### IP2ORG
+- 0 128.233.0.0/16 2020 01 01
+
+### ORG2IP
+- 1 usask 2020 01 01
+
+
 ## More Information
 For more information please read the full research paper in the repo: Bulk_Historic_IP2ORG2IP_Attribution.pdf
