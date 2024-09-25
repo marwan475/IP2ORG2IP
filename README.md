@@ -35,6 +35,7 @@ Autonomous Systems (AS) can be most simply described as a group of IP prefixes t
 - For each request in the file, format packet accordingly
 - Client sends this packet off to the server and awaits a response
 - Client receives response, and displays this to the console
+- Repeats for each request
 
 
 ### Server 
@@ -43,3 +44,7 @@ Autonomous Systems (AS) can be most simply described as a group of IP prefixes t
 - Server will extract the required information from packet
 - Dependent on request type, server will either do IP2ORG, or ORG2IP
 - Server then sends response back to client with the requested information
+- Server waits for any more requests from connection and terminates if none
+
+## More Information
+For more information please read the full research paper in the repo: Bulk_Historic_IP2ORG2IP_Attribution.pdf
