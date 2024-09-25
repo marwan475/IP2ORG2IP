@@ -37,6 +37,27 @@ Autonomous Systems (AS) can be most simply described as a group of IP prefixes t
 - Client receives response, and displays this to the console
 - Repeats for each request
 
+### Client Args
+- Servername (name of machine hosting server)
+- Filename (file containing addresses in required format)
+- File structure
+  - Addresses one on each line
+  - Line Structure
+    - (request type) (address/org) (year) (month) (day)
+    - Request type
+      - 0 ip 2 org
+      - 1 org 2 ip
+    - Address
+      - 0.0.0.0
+    - Org
+      - Google (max 55 chars)
+    - Year
+      - 2002
+    - Month
+      - 4
+    - Day
+      - 22
+
 
 ### Server 
 
@@ -46,7 +67,27 @@ Autonomous Systems (AS) can be most simply described as a group of IP prefixes t
 - Server then sends response back to client with the requested information
 - Server waits for any more requests from connection and terminates if none
 
-## Example inputs
+
+### MSG Protocol
+Client packet
+- Index and what they store
+  - 0 = request type
+  - 1 = year
+  - 2 = month
+  - 3 = day
+  - 4-14 address
+    - First 4 for ip if ip2org
+    - all for domain name org2ip
+
+## How to run
+
+### Client
+- ./client server_machine_name inputs.txt
+
+### Server
+- ./server
+
+## Example line in file
 
 ### IP2ORG
 - 0 128.233.0.0/16 2020 01 01
